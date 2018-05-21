@@ -8,6 +8,6 @@ Blockly.JavaScript['weather'] = function(block) {
 Blockly.JavaScript['weather_aqi'] = function(block) {
   var location = block.getFieldValue('location');
   var type = block.getFieldValue('type');
-  var code = 'weather_aqi(' + location + ',' + type + ',e)';
+  var code = 'weather_aqi("' + location + '","' + type + '",data)';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
