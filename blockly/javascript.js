@@ -8,6 +8,9 @@ Blockly.JavaScript['weather'] = function(block) {
   } else if (dropdown_select == 2) {
     var code = 'weather_observe(function(data){\n' +
       statements_do + '\n});';
+  } else if (dropdown_select == 3) {
+    var code = 'weather_forecast(function(data){\n' +
+      statements_do + '\n});';
   }
   return code;
 };

@@ -74,8 +74,8 @@
     }
   }
 
-  window.weather_forecast_data = weather_observe_data;
-  window.weather_forecast = weather_observe;
+  window.weather_forecast_data = weather_forecast_data;
+  window.weather_forecast = weather_forecast;
   window.weather_observe_data = weather_observe_data;
   window.weather_observe = weather_observe;
   window.weather_aqi_data = weather_aqi_data;
