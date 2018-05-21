@@ -1,0 +1,4 @@
+<category id="catWeather">
+  <block type="weather"></block>
+  <block type="weather_pm25"></block>
+</category>
