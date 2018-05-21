@@ -21,7 +21,7 @@
             let replyMsg = arr[i].SiteName + '的' + arr[i].note + ' ( PM2.5：' + arr[i].PM25 + '，PM10：' + arr[i].PM10 + '，臭氧：' + arr[i].O3 + '，一氧化碳：' + arr[i].CO + '，二氧化氮：' + arr[i].NO2 + '，二氧化硫：' + arr[i].SO2 + ' )';
             return replyMsg;
           } else {
-            return e[i][type];
+            return arr[i][type];
           }
         }
       }
@@ -44,8 +44,8 @@
     let arr = e[0];
     let num = type * 1;
     if (e[1] == 'observe') {
+      let result = arr[name];
       if (num == 0) {
-        let result = arr[name];
         return name + '現在的溫度 ' + result[0] + ' 度，相對濕度 ' + result[1] + '%，風力 ' + result[2] + ' 級，天氣概況：' + result[3];
       } else {
         return result[num - 1];
