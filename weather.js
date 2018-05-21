@@ -42,12 +42,13 @@
 
   function weather_observe_data(name, type, e) {
     let arr = e[0];
+    let num = type * 1;
     if (e[1] == 'observe') {
-      if (type == 0) {
+      if (num == 0) {
         let result = arr[name];
         return name + '現在的溫度 ' + result[0] + ' 度，相對濕度 ' + result[1] + '%，風力 ' + result[2] + ' 級，天氣概況：' + result[3];
       } else {
-        return result[type - 1];
+        return result[num - 1];
       }
     } else {
       return '資料格式錯誤';
@@ -65,9 +66,9 @@
 
 
   function weather_forecast_data(name, type, e) {
-    let arr = e[0];
     if (e[1] == 'forecast') {
-      var result = e[name][type];
+      let num = type * 1;
+      let result = e[name][num];
       return '氣溫 ' + result[0] + ' 度，降雨機率 ' + result[1] + '，' + result[2];
     } else {
       return '資料格式錯誤';

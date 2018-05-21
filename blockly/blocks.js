@@ -207,11 +207,11 @@ Blockly.Blocks['weather_observe'] = {
       ]), "location")
       .appendField("類型")
       .appendField(new Blockly.FieldDropdown([
-        ["即時天氣描述", 0],
-        ["溫度", 1],
-        ["相對濕度", 2],
-        ["風力", 3],
-        ["天氣", 4],
+        ["即時天氣描述", "0"],
+        ["溫度", "1"],
+        ["相對濕度", "2"],
+        ["風力", "3"],
+        ["天氣", "4"],
       ]), "type");
     this.setOutput(true, null);
     this.setColour(180);
@@ -251,9 +251,9 @@ Blockly.Blocks['weather_forecast'] = {
       ]), "location")
       .appendField("類型")
       .appendField(new Blockly.FieldDropdown([
-        ["未來 6 小時", 0],
-        ["未來 18 小時", 1],
-        ["未來 36 小時", 2]
+        ["未來 6 小時", "0"],
+        ["未來 18 小時", "1"],
+        ["未來 36 小時", "2"]
       ]), "type");
     this.setOutput(true, null);
     this.setColour(180);
