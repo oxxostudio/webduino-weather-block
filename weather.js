@@ -23,7 +23,7 @@
     }
   }
 
-  window.weather_pm25 = weather_pm25;
+  window.weather_aqi = weather_aqi;
   window.weather = weather;
 
 }(window, window.document));

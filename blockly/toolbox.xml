@@ -1,4 +1,4 @@
 <category id="catWeather">
   <block type="weather"></block>
-  <block type="weather_pm25"></block>
+  <block type="weather_aqi"></block>
 </category>

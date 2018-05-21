@@ -1,5 +1,5 @@
 {
-  "types": ["weather","weather_pm25"],
+  "types": ["weather","weather_aqi"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",
