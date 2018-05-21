@@ -38,7 +38,7 @@
 
   function weather_observe_data(name, type, e) {
     if(type == 0){
-      return e[name] +'現在的溫度 '+e[name][0]+' 度，相對濕度 '+e[name][1]+'%，風力 '+e[name][2]+' 級，天氣概況：'+e[name][3];
+      return name +'現在的溫度 '+e[name][0]+' 度，相對濕度 '+e[name][1]+'%，風力 '+e[name][2]+' 級，天氣概況：'+e[name][3];
     }else{
       return e[name][type-1];
     }
