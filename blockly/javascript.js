@@ -25,3 +25,10 @@ Blockly.JavaScript['weather_observe'] = function(block) {
   var code = 'weather_observe_data("' + location + '","' + type + '",data)';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
+
+Blockly.JavaScript['weather_forecast'] = function(block) {
+  var location = block.getFieldValue('location');
+  var type = block.getFieldValue('type');
+  var code = 'weather_forecast_data("' + location + '","' + type + '",data)';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};

@@ -2,4 +2,5 @@
   <block type="weather"></block>
   <block type="weather_aqi"></block>
   <block type="weather_observe"></block>
+  <block type="weather_forecast"></block>
 </category>

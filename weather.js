@@ -8,7 +8,7 @@
         type: 'weather'
       },
       function(data) {
-        callback([data,'aqi']);
+        callback([data, 'aqi']);
       });
   }
 
@@ -35,7 +35,7 @@
         type: 'weather'
       },
       function(data) {
-        callback([data,'observe']);
+        callback([data, 'observe']);
       });
   }
 
@@ -44,15 +44,38 @@
     let arr = e[0];
     if (e[1] == 'observe') {
       if (type == 0) {
-        return name + '現在的溫度 ' + arr[name][0] + ' 度，相對濕度 ' + arr[name][1] + '%，風力 ' + arr[name][2] + ' 級，天氣概況：' + arr[name][3];
+        let result = arr[name];
+        return name + '現在的溫度 ' + result[0] + ' 度，相對濕度 ' + result[1] + '%，風力 ' + result[2] + ' 級，天氣概況：' + result[3];
       } else {
-        return arr[name][type - 1];
+        return result[type - 1];
       }
     } else {
       return '資料格式錯誤';
     }
   }
 
+  function weather_forecast(callback) {
+    $.post('https://script.google.com/macros/s/AKfycbygv1-_U7y5ieMYKASXI0l4hLsMKekasUpzl4gKiL0BwNyE1vU/exec', {
+        type: 'weather'
+      },
+      function(data) {
+        callback([data, 'forecast']);
+      });
+  }
+
+
+  function weather_forecast_data(name, type, e) {
+    let arr = e[0];
+    if (e[1] == 'forecast') {
+      var result = e[name][type];
+      return '氣溫 ' + result[0] + ' 度，降雨機率 ' + result[1] + '，' + result[2];
+    } else {
+      return '資料格式錯誤';
+    }
+  }
+
+  window.weather_forecast_data = weather_observe_data;
+  window.weather_forecast = weather_observe;
   window.weather_observe_data = weather_observe_data;
   window.weather_observe = weather_observe;
   window.weather_aqi_data = weather_aqi_data;

@@ -4,7 +4,8 @@ Blockly.Blocks['weather'] = {
       .appendField("取得氣象資料")
       .appendField(new Blockly.FieldDropdown([
         ["空氣品質", "1"],
-        ["即時觀測", "2"]
+        ["即時觀測", "2"],
+        ["氣象預報", "3"]
       ]), "select");
     this.appendStatementInput("do")
       .setCheck(null)
@@ -215,6 +216,48 @@ Blockly.Blocks['weather_observe'] = {
     this.setOutput(true, null);
     this.setColour(180);
     this.setTooltip("");
-    this.setHelpUrl("https://taqm.epa.gov.tw/taqm/tw/default.aspx");
+    this.setHelpUrl("https://www.cwb.gov.tw/V7/observe/");
+  }
+};
+
+
+Blockly.Blocks['weather_forecast'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField("氣象預報，地點")
+      .appendField(new Blockly.FieldDropdown([
+        ["北部 - 基隆市", "基隆市"],
+        ["北部 - 臺北市", "臺北市"],
+        ["北部 - 新北市", "新北市"],
+        ["北部 - 桃園市", "桃園市"],
+        ["北部 - 新竹市", "新竹市"],
+        ["北部 - 新竹縣", "新竹縣"],
+        ["北部 - 苗栗縣", "苗栗縣"],
+        ["中部 - 臺中市", "臺中市"],
+        ["中部 - 彰化縣", "彰化縣"],
+        ["中部 - 南投縣", "南投縣"],
+        ["中部 - 雲林縣", "雲林縣"],
+        ["中部 - 嘉義市", "嘉義市"],
+        ["中部 - 嘉義縣", "嘉義縣"],
+        ["東部 - 宜蘭縣", "宜蘭縣"],
+        ["東部 - 花蓮縣", "花蓮縣"],
+        ["東部 - 臺東縣", "臺東縣"],
+        ["南部 - 臺南市", "臺南市"],
+        ["南部 - 高雄市", "高雄市"],
+        ["南部 - 屏東縣", "屏東縣"],
+        ["外島 - 連江縣", "連江縣"],
+        ["外島 - 金門縣", "金門縣"],
+        ["外島 - 澎湖縣", "澎湖縣"]
+      ]), "location")
+      .appendField("類型")
+      .appendField(new Blockly.FieldDropdown([
+        ["未來 6 小時", 0],
+        ["未來 18 小時", 1],
+        ["未來 36 小時", 2]
+      ]), "type");
+    this.setOutput(true, null);
+    this.setColour(180);
+    this.setTooltip("");
+    this.setHelpUrl("https://www.cwb.gov.tw/V7/forecast/index3.htm");
   }
 };
