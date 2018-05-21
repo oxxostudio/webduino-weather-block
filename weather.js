@@ -69,7 +69,7 @@
     if (e[1] == 'forecast') {
       let num = type * 1;
       let result = e[0][name][num];
-      return '氣溫 ' + result[0] + ' 度，降雨機率 ' + result[1] + '，' + result[2];
+      return '氣溫 ' + result[0] + 'C，降雨機率 ' + result[1] + '，' + result[2];
     } else {
       return '資料格式錯誤';
     }
