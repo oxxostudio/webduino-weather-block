@@ -14,11 +14,13 @@
 
   function weather_aqi(name, type, e) {
     for (let i = 0; i < e.length; i++) {
-      if (type == 'all') {
-        let replyMsg = e[i].SiteName + '的' + e[i].note + ' ( PM2.5：' + e[i].PM25 + '，PM10：' + e[i].PM10 + '，臭氧：' + e[i].O3 + '，一氧化碳：' + e[i].CO + '，二氧化氮：' + e[i].NO2 + '，二氧化硫：' + e[i].SO2 + ' )';
-        return replyMsg;
-      } else {
-        return e[i][type];
+      if (e[i].SiteName == name) {
+        if (type == 'all') {
+          let replyMsg = e[i].SiteName + '的' + e[i].note + ' ( PM2.5：' + e[i].PM25 + '，PM10：' + e[i].PM10 + '，臭氧：' + e[i].O3 + '，一氧化碳：' + e[i].CO + '，二氧化氮：' + e[i].NO2 + '，二氧化硫：' + e[i].SO2 + ' )';
+          return replyMsg;
+        } else {
+          return e[i][type];
+        }
       }
     }
   }
