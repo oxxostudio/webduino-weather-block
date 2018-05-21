@@ -8,16 +8,17 @@
         type: 'weather'
       },
       function(data) {
-        callback(data);
+        callback([data,'aqi']);
       });
   }
 
-  function weather_aqi_data(name, type, e, check) {
-    if (check == 'aqi') {
-      for (let i = 0; i < e.length; i++) {
-        if (e[i].SiteName == name) {
+  function weather_aqi_data(name, type, e) {
+    let arr = e[0];
+    if (e[1] == 'aqi') {
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i].SiteName == name) {
           if (type == 'all') {
-            let replyMsg = e[i].SiteName + '的' + e[i].note + ' ( PM2.5：' + e[i].PM25 + '，PM10：' + e[i].PM10 + '，臭氧：' + e[i].O3 + '，一氧化碳：' + e[i].CO + '，二氧化氮：' + e[i].NO2 + '，二氧化硫：' + e[i].SO2 + ' )';
+            let replyMsg = arr[i].SiteName + '的' + arr[i].note + ' ( PM2.5：' + arr[i].PM25 + '，PM10：' + arr[i].PM10 + '，臭氧：' + arr[i].O3 + '，一氧化碳：' + arr[i].CO + '，二氧化氮：' + arr[i].NO2 + '，二氧化硫：' + arr[i].SO2 + ' )';
             return replyMsg;
           } else {
             return e[i][type];
@@ -34,17 +35,18 @@
         type: 'weather'
       },
       function(data) {
-        callback(data);
+        callback([data,'observe']);
       });
   }
 
 
-  function weather_observe_data(name, type, e, check) {
-    if (check == 'observe') {
+  function weather_observe_data(name, type, e) {
+    let arr = e[0];
+    if (e[1] == 'observe') {
       if (type == 0) {
-        return name + '現在的溫度 ' + e[name][0] + ' 度，相對濕度 ' + e[name][1] + '%，風力 ' + e[name][2] + ' 級，天氣概況：' + e[name][3];
+        return name + '現在的溫度 ' + arr[name][0] + ' 度，相對濕度 ' + arr[name][1] + '%，風力 ' + arr[name][2] + ' 級，天氣概況：' + arr[name][3];
       } else {
-        return e[name][type - 1];
+        return arr[name][type - 1];
       }
     } else {
       return '資料格式錯誤';

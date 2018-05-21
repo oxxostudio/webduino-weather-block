@@ -124,7 +124,7 @@ Blockly.Blocks['weather_aqi'] = {
 Blockly.Blocks['weather_observe'] = {
   init: function() {
     this.appendDummyInput()
-      .appendField("即時氣象觀測，地點")
+      .appendField("即時觀測，地點")
       .appendField(new Blockly.FieldDropdown([
         ["北部 - 基隆", "基隆"],
         ["北部 - 臺北", "臺北"],
