@@ -12,7 +12,7 @@ Blockly.Blocks['weather'] = {
       .appendField("執行");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(225);
+    this.setColour(230);
     this.setTooltip("");
     this.setHelpUrl("");
   }
@@ -113,7 +113,7 @@ Blockly.Blocks['weather_aqi'] = {
         ["二氧化硫", "SO2"]
       ]), "type");
     this.setOutput(true, null);
-    this.setColour(180);
+    this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("https://taqm.epa.gov.tw/taqm/tw/default.aspx");
   }
@@ -214,7 +214,7 @@ Blockly.Blocks['weather_observe'] = {
         ["天氣", "4"],
       ]), "type");
     this.setOutput(true, null);
-    this.setColour(180);
+    this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("https://www.cwb.gov.tw/V7/observe/");
   }
@@ -256,7 +256,7 @@ Blockly.Blocks['weather_forecast'] = {
         ["未來 36 小時", "2"]
       ]), "type");
     this.setOutput(true, null);
-    this.setColour(180);
+    this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("https://www.cwb.gov.tw/V7/forecast/index3.htm");
   }
