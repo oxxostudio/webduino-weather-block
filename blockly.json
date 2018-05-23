@@ -1,5 +1,5 @@
 {
-  "types": ["weather","weather_aqi","weather_observe","weather_forecast","weather_reservoir"],
+  "types": ["weather","weather_aqi","weather_observe","weather_forecast","weather_reservoir","weather_quake"],
   "category": "catPlus",
   "scripts": [
     "blockly/blocks.js",

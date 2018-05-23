@@ -70,11 +70,11 @@
       let num = type * 1;
       let result = e[0][name][num];
       let note;
-      if(num==0){
+      if (num == 0) {
         note = '未來 6 小時預報：';
-      }else if(num==1){
+      } else if (num == 1) {
         note = '未來 18 小時預報：';
-      }else{
+      } else {
         note = '未來 36 小時預報：';
       }
       return name + note + '氣溫 ' + result[0] + 'C，降雨機率 ' + result[1] + '，' + result[2];
@@ -96,9 +96,9 @@
   function weather_reservoir_data(name, type, e) {
     if (e[1] == 'reservoir') {
       let result = e[0][name];
-      if(type == 'all'){
-        return name + '蓄水百分比：' + result.CapacityRate + '，有效蓄水量：' + result.Capacity + ' 萬立方公尺，本日降雨：' + result.Basin_Rain;
-      }else{
+      if (type == 'all') {
+        return name + '蓄水百分比：' + result.CapacityRate + '%，有效蓄水量：' + result.Capacity + ' 萬立方公尺，本日降雨：' + result.Basin_Rain;
+      } else {
         return result[type];
       }
     } else {
@@ -106,6 +106,33 @@
     }
   }
 
+  function weather_quake(callback) {
+    $.post('https://script.google.com/macros/s/AKfycbwKdkbIJdBp47LQdUwdGj3Bx6G--VLhPbTb-hrNbxQFee-WEikL/exec', {
+        type: 'weather'
+      },
+      function(data) {
+        callback([data, 'quake']);
+      });
+  }
+
+
+  function weather_quake_data(num, e) {
+    if (e[1] == 'quake') {
+      let result = e[0];
+      if (num == '0') {
+        content = e[0][0];
+      } else if (num == '1') {
+        let content = e[0][0] + '、' + e[0][1];
+      } else if (num == '2') {
+        let content = e[0][0] + '、' + e[0][1] + '、' + e[0][2];
+      }
+      return content;
+    } else {
+      return '資料格式錯誤';
+    }
+  }
+  window.weather_quake_data = weather_quake_data;
+  window.weather_quake = weather_quake;
   window.weather_reservoir_data = weather_reservoir_data;
   window.weather_reservoir = weather_reservoir;
   window.weather_forecast_data = weather_forecast_data;

@@ -6,7 +6,8 @@ Blockly.Blocks['weather'] = {
         ["空氣品質", "1"],
         ["即時觀測", "2"],
         ["氣象預報", "3"],
-        ["水庫水情", "4"]
+        ["水庫水情", "4"],
+        ["地震資訊", "5"]
       ]), "select");
     this.appendStatementInput("do")
       .setCheck(null)
@@ -298,5 +299,23 @@ Blockly.Blocks['weather_reservoir'] = {
     this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("http://fhy.wra.gov.tw/fhy/Monitor/Reservoir");
+  }
+};
+
+
+Blockly.Blocks['weather_quake'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField("最近")
+      .appendField(new Blockly.FieldDropdown([
+        ["1", "0"],
+        ["2", "1"],
+        ["3", "2"]
+      ]), "num")
+      .appendField("次發生的地震");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip("");
+    this.setHelpUrl("https://www.cwb.gov.tw/V7/earthquake/quake_index.htm");
   }
 };
