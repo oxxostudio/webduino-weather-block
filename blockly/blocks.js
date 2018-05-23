@@ -252,9 +252,9 @@ Blockly.Blocks['weather_forecast'] = {
       ]), "location")
       .appendField("類型")
       .appendField(new Blockly.FieldDropdown([
-        ["未來 6 小時", "0"],
-        ["未來 18 小時", "1"],
-        ["未來 36 小時", "2"]
+        ["未來6小時", "0"],
+        ["未來18小時", "1"],
+        ["未來36小時", "2"]
       ]), "type");
     this.setOutput(true, null);
     this.setColour(210);
