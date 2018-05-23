@@ -107,7 +107,7 @@
   }
 
   function weather_quake(callback) {
-    $.post('https://script.google.com/macros/s/AKfycbwKdkbIJdBp47LQdUwdGj3Bx6G--VLhPbTb-hrNbxQFee-WEikL/exec', {
+    $.post('https://script.google.com/macros/s/AKfycbxDyp2rmO7iVURZWT3Qg8UsDOuzgxrFjKm1FGxsrm2FAJWG8BE/exec', {
         type: 'weather'
       },
       function(data) {
