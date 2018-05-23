@@ -69,7 +69,15 @@
     if (e[1] == 'forecast') {
       let num = type * 1;
       let result = e[0][name][num];
-      return '氣溫 ' + result[0] + 'C，降雨機率 ' + result[1] + '，' + result[2];
+      let note;
+      if(num==0){
+        note = '未來 6 小時預報：';
+      }else if(num==1){
+        note = '未來 18 小時預報：';
+      }else{
+        note = '未來 36 小時預報：';
+      }
+      return name + note + '氣溫 ' + result[0] + 'C，降雨機率 ' + result[1] + '，' + result[2];
     } else {
       return '資料格式錯誤';
     }
