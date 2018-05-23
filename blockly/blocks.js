@@ -216,7 +216,7 @@ Blockly.Blocks['weather_observe'] = {
         ["天氣", "4"],
       ]), "type");
     this.setOutput(true, null);
-    this.setColour(210);
+    this.setColour(190);
     this.setTooltip("");
     this.setHelpUrl("https://www.cwb.gov.tw/V7/observe/");
   }
@@ -258,7 +258,7 @@ Blockly.Blocks['weather_forecast'] = {
         ["未來36小時", "2"]
       ]), "type");
     this.setOutput(true, null);
-    this.setColour(210);
+    this.setColour(170);
     this.setTooltip("");
     this.setHelpUrl("https://www.cwb.gov.tw/V7/forecast/index3.htm");
   }
@@ -296,7 +296,7 @@ Blockly.Blocks['weather_reservoir'] = {
         ["水情彙整資料", "all"]
       ]), "type");
     this.setOutput(true, null);
-    this.setColour(210);
+    this.setColour(150);
     this.setTooltip("");
     this.setHelpUrl("http://fhy.wra.gov.tw/fhy/Monitor/Reservoir");
   }
@@ -306,7 +306,7 @@ Blockly.Blocks['weather_reservoir'] = {
 Blockly.Blocks['weather_quake'] = {
   init: function() {
     this.appendDummyInput()
-      .appendField("最近")
+      .appendField("地震資訊，最近")
       .appendField(new Blockly.FieldDropdown([
         ["1", "0"],
         ["2", "1"],
@@ -314,7 +314,7 @@ Blockly.Blocks['weather_quake'] = {
       ]), "num")
       .appendField("次發生的地震");
     this.setOutput(true, null);
-    this.setColour(210);
+    this.setColour(130);
     this.setTooltip("");
     this.setHelpUrl("https://www.cwb.gov.tw/V7/earthquake/quake_index.htm");
   }
