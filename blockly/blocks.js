@@ -290,10 +290,10 @@ Blockly.Blocks['weather_reservoir'] = {
       ]), "location")
       .appendField("類型")
       .appendField(new Blockly.FieldDropdown([
+        ["水情彙整資料", "all"],
         ["蓄水百分比 ( % )", "CapacityRate"],
         ["有效蓄水量 ( 萬立方公尺 )", "Capacity"],
-        ["集水區降雨量 ( mm )", "Basin_Rain"],
-        ["水情彙整資料", "all"]
+        ["集水區降雨量 ( mm )", "Basin_Rain"]
       ]), "type");
     this.setOutput(true, null);
     this.setColour(150);
