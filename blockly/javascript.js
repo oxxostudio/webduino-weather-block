@@ -51,6 +51,6 @@ Blockly.JavaScript['weather_reservoir'] = function(block) {
 
 Blockly.JavaScript['weather_quake'] = function(block) {
   var num = block.getFieldValue('num');
-  var code = 'weather_reservoir_data("' + num + '",data)';
+  var code = 'weather_quake_data("' + num + '",data)';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

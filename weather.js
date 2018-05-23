@@ -119,12 +119,13 @@
   function weather_quake_data(num, e) {
     if (e[1] == 'quake') {
       let result = e[0];
+      let content;
       if (num == '0') {
-        content = e[0][0];
+        content = result[0];
       } else if (num == '1') {
-        let content = e[0][0] + '、' + e[0][1];
+        content = result[0] + '、' + result[1];
       } else if (num == '2') {
-        let content = e[0][0] + '、' + e[0][1] + '、' + e[0][2];
+        content = result[0] + '、' + result[1] + '、' + result[2];
       }
       return content;
     } else {
