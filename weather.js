@@ -75,6 +75,31 @@
     }
   }
 
+  function weather_reservoir(callback) {
+    $.post('https://script.google.com/macros/s/AKfycbwKdkbIJdBp47LQdUwdGj3Bx6G--VLhPbTb-hrNbxQFee-WEikL/exec', {
+        type: 'weather'
+      },
+      function(data) {
+        callback([data, 'reservoir']);
+      });
+  }
+
+
+  function weather_reservoir_data(name, type, e) {
+    if (e[1] == 'reservoir') {
+      let result = e[0][name];
+      if(type == 'all'){
+        return name + '蓄水百分比：' + result.CapacityRate + '，有效蓄水量：' + result.Capacity + ' 萬立方公尺，本日降雨：' + result.Basin_Rain;
+      }else{
+        return result[type];
+      }
+    } else {
+      return '資料格式錯誤';
+    }
+  }
+
+  window.weather_reservoir_data = weather_reservoir_data;
+  window.weather_reservoir = weather_reservoir;
   window.weather_forecast_data = weather_forecast_data;
   window.weather_forecast = weather_forecast;
   window.weather_observe_data = weather_observe_data;

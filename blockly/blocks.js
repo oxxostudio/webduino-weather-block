@@ -5,7 +5,8 @@ Blockly.Blocks['weather'] = {
       .appendField(new Blockly.FieldDropdown([
         ["空氣品質", "1"],
         ["即時觀測", "2"],
-        ["氣象預報", "3"]
+        ["氣象預報", "3"],
+        ["水庫水情", "4"]
       ]), "select");
     this.appendStatementInput("do")
       .setCheck(null)
@@ -259,5 +260,43 @@ Blockly.Blocks['weather_forecast'] = {
     this.setColour(210);
     this.setTooltip("");
     this.setHelpUrl("https://www.cwb.gov.tw/V7/forecast/index3.htm");
+  }
+};
+
+
+Blockly.Blocks['weather_reservoir'] = {
+  init: function() {
+    this.appendDummyInput()
+      .appendField("水庫水情，地點")
+      .appendField(new Blockly.FieldDropdown([
+        ["石門水庫", "石門水庫"],
+        ["翡翠水庫", "翡翠水庫"],
+        ["寶山第二水庫", "寶山第二水庫"],
+        ["永和山水庫", "永和山水庫"],
+        ["明德水庫", "明德水庫"],
+        ["鯉魚潭水庫", "鯉魚潭水庫"],
+        ["德基水庫", "德基水庫"],
+        ["石岡壩", "石岡壩"],
+        ["霧社水庫", "霧社水庫"],
+        ["日月潭水庫", "日月潭水庫"],
+        ["仁義潭水庫", "仁義潭水庫"],
+        ["白河水庫", "白河水庫"],
+        ["烏山頭水庫", "烏山頭水庫"],
+        ["曾文水庫", "曾文水庫"],
+        ["南化水庫", "南化水庫"],
+        ["阿公店水庫", "阿公店水庫"],
+        ["牡丹水庫", "牡丹水庫"]
+      ]), "location")
+      .appendField("類型")
+      .appendField(new Blockly.FieldDropdown([
+        ["蓄水百分比 ( % )", "CapacityRate"],
+        ["有效蓄水量 ( 萬立方公尺 )", "Capacity"],
+        ["集水區降雨量 ( mm )", "Basin_Rain"],
+        ["水情彙整資料", "all"]
+      ]), "type");
+    this.setOutput(true, null);
+    this.setColour(210);
+    this.setTooltip("");
+    this.setHelpUrl("http://fhy.wra.gov.tw/fhy/Monitor/Reservoir");
   }
 };

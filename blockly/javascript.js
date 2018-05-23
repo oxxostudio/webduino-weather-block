@@ -11,6 +11,9 @@ Blockly.JavaScript['weather'] = function(block) {
   } else if (dropdown_select == 3) {
     var code = 'weather_forecast(function(data){\n' +
       statements_do + '\n});';
+  } else if (dropdown_select == 4) {
+    var code = 'weather_reservoir(function(data){\n' +
+      statements_do + '\n});';
   }
   return code;
 };
@@ -33,5 +36,12 @@ Blockly.JavaScript['weather_forecast'] = function(block) {
   var location = block.getFieldValue('location');
   var type = block.getFieldValue('type');
   var code = 'weather_forecast_data("' + location + '","' + type + '",data)';
+  return [code, Blockly.JavaScript.ORDER_NONE];
+};
+
+Blockly.JavaScript['weather_reservoir'] = function(block) {
+  var location = block.getFieldValue('location');
+  var type = block.getFieldValue('type');
+  var code = 'weather_reservoir_data("' + location + '","' + type + '",data)';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };

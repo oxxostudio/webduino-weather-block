@@ -3,4 +3,5 @@
   <block type="weather_aqi"></block>
   <block type="weather_observe"></block>
   <block type="weather_forecast"></block>
+  <block type="weather_reservoir"></block>
 </category>
