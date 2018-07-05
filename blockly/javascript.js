@@ -25,32 +25,32 @@ Blockly.JavaScript['weather_aqi'] = function(block) {
   var location = block.getFieldValue('location');
   var type = block.getFieldValue('type');
   var code = 'weather_aqi_data("' + location + '","' + type + '",data)';
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['weather_observe'] = function(block) {
   var location = block.getFieldValue('location');
   var type = block.getFieldValue('type');
   var code = 'weather_observe_data("' + location + '","' + type + '",data)';
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['weather_forecast'] = function(block) {
   var location = block.getFieldValue('location');
   var type = block.getFieldValue('type');
   var code = 'weather_forecast_data("' + location + '","' + type + '",data)';
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['weather_reservoir'] = function(block) {
   var location = block.getFieldValue('location');
   var type = block.getFieldValue('type');
   var code = 'weather_reservoir_data("' + location + '","' + type + '",data)';
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['weather_quake'] = function(block) {
   var num = block.getFieldValue('num');
   var code = 'weather_quake_data("' + num + '",data)';
-  return [code, Blockly.JavaScript.ORDER_NONE];
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
