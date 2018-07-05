@@ -5,4 +5,5 @@
   <block type="weather_forecast"></block>
   <block type="weather_reservoir"></block>
   <block type="weather_quake"></block>
+  <block type="weather_radar"></block>
 </category>

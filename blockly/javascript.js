@@ -17,8 +17,16 @@ Blockly.JavaScript['weather'] = function(block) {
   } else if (dropdown_select == 5) {
     var code = 'weather_quake(function(data){\n' +
       statements_do + '\n});';
+  } else if (dropdown_select == 6) {
+    var code = 'weather_radar(function(data){\n' +
+      statements_do + '\n});';
   }
   return code;
+};
+
+Blockly.JavaScript['weather_radar'] = function(block) {
+  var code = 'weather_radar_data(data)';
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
 };
 
 Blockly.JavaScript['weather_aqi'] = function(block) {

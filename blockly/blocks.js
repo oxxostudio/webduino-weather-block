@@ -1,5 +1,5 @@
 Blockly.Blocks['weather'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
       .appendField("取得氣象資料")
       .appendField(new Blockly.FieldDropdown([
@@ -7,7 +7,8 @@ Blockly.Blocks['weather'] = {
         ["即時觀測", "2"],
         ["氣象預報", "3"],
         ["水庫水情", "4"],
-        ["地震資訊", "5"]
+        ["地震資訊", "5"],
+        ["雷達回波", "6"]
       ]), "select");
     this.appendStatementInput("do")
       .setCheck(null)
@@ -16,13 +17,13 @@ Blockly.Blocks['weather'] = {
     this.setNextStatement(true, null);
     this.setColour(230);
     this.setTooltip("");
-    this.setHelpUrl("");
+    this.setHelpUrl("http://oxxo.studio");
   }
 };
 
 
 Blockly.Blocks['weather_aqi'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
       .appendField("空氣品質，地點")
       .appendField(new Blockly.FieldDropdown([
@@ -125,7 +126,7 @@ Blockly.Blocks['weather_aqi'] = {
 
 
 Blockly.Blocks['weather_observe'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
       .appendField("即時觀測，地點")
       .appendField(new Blockly.FieldDropdown([
@@ -214,6 +215,7 @@ Blockly.Blocks['weather_observe'] = {
         ["相對濕度", "2"],
         ["風力", "3"],
         ["天氣", "4"],
+        ["當日累積雨量", "5"]
       ]), "type");
     this.setOutput(true, null);
     this.setColour(190);
@@ -224,7 +226,7 @@ Blockly.Blocks['weather_observe'] = {
 
 
 Blockly.Blocks['weather_forecast'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
       .appendField("氣象預報，地點")
       .appendField(new Blockly.FieldDropdown([
@@ -266,7 +268,7 @@ Blockly.Blocks['weather_forecast'] = {
 
 
 Blockly.Blocks['weather_reservoir'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
       .appendField("水庫水情，地點")
       .appendField(new Blockly.FieldDropdown([
@@ -304,7 +306,7 @@ Blockly.Blocks['weather_reservoir'] = {
 
 
 Blockly.Blocks['weather_quake'] = {
-  init: function() {
+  init: function () {
     this.appendDummyInput()
       .appendField("地震資訊，最近")
       .appendField(new Blockly.FieldDropdown([
@@ -317,5 +319,16 @@ Blockly.Blocks['weather_quake'] = {
     this.setColour(130);
     this.setTooltip("");
     this.setHelpUrl("https://www.cwb.gov.tw/V7/earthquake/quake_index.htm");
+  }
+};
+
+Blockly.Blocks['weather_radar'] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("雷達回波圖");
+    this.setOutput(true, null);
+    this.setColour(110);
+    this.setTooltip("");
+    this.setHelpUrl("https://www.cwb.gov.tw/V7/observe/radar/");
   }
 };

@@ -46,7 +46,7 @@
     if (e[1] == 'observe') {
       let result = arr[name];
       if (num == 0) {
-        return name + '現在的溫度 ' + result[0] + ' 度，相對濕度 ' + result[1] + '%，風力 ' + result[2] + ' 級，天氣概況：' + result[3];
+        return name + '現在的溫度 ' + result[0] + ' 度，當日累積雨量 ' + result[5] + ' mm，相對濕度 ' + result[1] + '%，風力 ' + result[2] + ' 級，天氣概況：' + result[3];
       } else {
         return result[num - 1];
       }
@@ -132,6 +132,25 @@
       return '資料格式錯誤';
     }
   }
+
+  function weather_radar(callback) {
+    $.post('https://script.google.com/macros/s/AKfycbyxRFGpRm0N0D_7u_abAqZrd259uHTi8habrSw0H6v20TEj21g/exec', {
+        type: 'weather'
+      },
+      function(data) {
+        callback([data, 'radar']);
+      });
+  }
+  function weather_radar_data(e) {
+    if (e[1] == 'radar') {
+      let result = e[0];
+      return result;
+    } else {
+      return '資料格式錯誤';
+    }
+  }
+  window.weather_radar_data = weather_radar_data;
+  window.weather_radar = weather_radar;
   window.weather_quake_data = weather_quake_data;
   window.weather_quake = weather_quake;
   window.weather_reservoir_data = weather_reservoir_data;
