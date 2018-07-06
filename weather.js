@@ -46,7 +46,7 @@
     if (e[1] == 'observe') {
       let result = arr[name];
       if (num == 0) {
-        return name + '現在的溫度 ' + result[0] + ' 度，當日累積雨量 ' + result[5] + ' mm，相對濕度 ' + result[1] + '%，風力 ' + result[2] + ' 級，天氣概況：' + result[3];
+        return name + '現在的溫度 ' + result[0] + ' 度，當日累積雨量 ' + result[4] + ' mm，相對濕度 ' + result[1] + '%，風力 ' + result[2] + ' 級，天氣概況：' + result[3];
       } else {
         return result[num - 1];
       }
