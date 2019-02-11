@@ -4,7 +4,7 @@
 
   function weather_aqi(callback) {
     var replyMsg = '';
-    $.post('https://script.google.com/macros/s/AKfycbxfzHxi1ok-NxVGBN5vAU-VuyGpYV0VQt8TSGeMe8w0Ompvw6o/exec', {
+    $.post('https://script.google.com/macros/s/AKfycbwDnYSKxqcastsxTRFgFRHwsF54AD-oVoQPI5QFvVS9I9-7Knt6/exec', {
         type: 'weather'
       },
       function(data) {
@@ -31,7 +31,7 @@
   }
 
   function weather_observe(callback) {
-    $.post('https://script.google.com/macros/s/AKfycbyvTOcbo0mM1ecyWxTUsv4sBzfdEupD04q0LeZ7IGGgGMiHgRHx/exec', {
+    $.post('https://script.google.com/macros/s/AKfycbxh4PmUXodFz8fehGy_9HrAGDu22FROTWzDsoNdmhfqye5cYDY/exec', {
         type: 'weather'
       },
       function(data) {
@@ -56,7 +56,7 @@
   }
 
   function weather_forecast(callback) {
-    $.post('https://script.google.com/macros/s/AKfycbygv1-_U7y5ieMYKASXI0l4hLsMKekasUpzl4gKiL0BwNyE1vU/exec', {
+    $.post('https://script.google.com/macros/s/AKfycbxO4ILyFx5JuVX0mSPjvgEGPK-x0XQ4TPZGdTOJrbmq0nIIauo/exec', {
         type: 'weather'
       },
       function(data) {
@@ -84,7 +84,7 @@
   }
 
   function weather_reservoir(callback) {
-    $.post('https://script.google.com/macros/s/AKfycbwKdkbIJdBp47LQdUwdGj3Bx6G--VLhPbTb-hrNbxQFee-WEikL/exec', {
+    $.post('https://script.google.com/macros/s/AKfycbzfJmiMn3ntcDqxzTr14jK9mvHp8o87qhUHTPcPqwLJedXp_bE/exec', {
         type: 'weather'
       },
       function(data) {
@@ -107,7 +107,7 @@
   }
 
   function weather_quake(callback) {
-    $.post('https://script.google.com/macros/s/AKfycbxDyp2rmO7iVURZWT3Qg8UsDOuzgxrFjKm1FGxsrm2FAJWG8BE/exec', {
+    $.post('https://script.google.com/macros/s/AKfycbyZEGX1uj5vkTjKn7UJmi0OFR4m7IQSlFczEABS4fHaJ-WKztc/exec', {
         type: 'weather'
       },
       function(data) {
@@ -134,7 +134,7 @@
   }
 
   function weather_radar(callback) {
-    $.post('https://script.google.com/macros/s/AKfycbyxRFGpRm0N0D_7u_abAqZrd259uHTi8habrSw0H6v20TEj21g/exec', {
+    $.post('https://script.google.com/macros/s/AKfycbxjc_WiH_Cc6uVGqacGOFqM0Xm2-dNKiD4C5tLoZueCNhAJVmE/exec', {
         type: 'weather'
       },
       function(data) {

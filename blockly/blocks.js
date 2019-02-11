@@ -117,8 +117,8 @@ Blockly.Blocks['weather_aqi'] = {
       ]), "type");
     this.setOutput(true, null);
     this.setColour(210);
-    this.setTooltip("");
-    this.setHelpUrl("https://taqm.epa.gov.tw/taqm/tw/default.aspx");
+    this.setTooltip("https://taqm.epa.gov.tw/taqm/tw/default.aspx");
+    this.setHelpUrl("https://oxxo.studio");
   }
 };
 
@@ -219,8 +219,8 @@ Blockly.Blocks['weather_observe'] = {
       ]), "type");
     this.setOutput(true, null);
     this.setColour(190);
-    this.setTooltip("");
-    this.setHelpUrl("https://www.cwb.gov.tw/V7/observe/");
+    this.setTooltip("https://www.cwb.gov.tw/V7/observe/");
+    this.setHelpUrl("https://oxxo.studio");
   }
 };
 
@@ -261,8 +261,8 @@ Blockly.Blocks['weather_forecast'] = {
       ]), "type");
     this.setOutput(true, null);
     this.setColour(170);
-    this.setTooltip("");
-    this.setHelpUrl("https://www.cwb.gov.tw/V7/forecast/index3.htm");
+    this.setTooltip("https://www.cwb.gov.tw/V7/forecast/index3.htm");
+    this.setHelpUrl("https://oxxo.studio");
   }
 };
 
@@ -299,8 +299,8 @@ Blockly.Blocks['weather_reservoir'] = {
       ]), "type");
     this.setOutput(true, null);
     this.setColour(150);
-    this.setTooltip("");
-    this.setHelpUrl("http://fhy.wra.gov.tw/fhy/Monitor/Reservoir");
+    this.setTooltip("http://fhy.wra.gov.tw/fhy/Monitor/Reservoir");
+    this.setHelpUrl("https://oxxo.studio");
   }
 };
 
@@ -317,8 +317,8 @@ Blockly.Blocks['weather_quake'] = {
       .appendField("次發生的地震");
     this.setOutput(true, null);
     this.setColour(130);
-    this.setTooltip("");
-    this.setHelpUrl("https://www.cwb.gov.tw/V7/earthquake/quake_index.htm");
+    this.setTooltip("https://www.cwb.gov.tw/V7/earthquake/quake_index.htm");
+    this.setHelpUrl("https://oxxo.studio");
   }
 };
 
@@ -328,7 +328,7 @@ Blockly.Blocks['weather_radar'] = {
       .appendField("雷達回波圖");
     this.setOutput(true, null);
     this.setColour(110);
-    this.setTooltip("");
-    this.setHelpUrl("https://www.cwb.gov.tw/V7/observe/radar/");
+    this.setTooltip("https://www.cwb.gov.tw/V7/observe/radar/");
+    this.setHelpUrl("https://oxxo.studio");
   }
 };
